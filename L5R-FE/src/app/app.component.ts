@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { APP_BASE_HREF } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +11,13 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class AppComponent {
   constructor(
     private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer
+    private domSanitizer: DomSanitizer,
+    @Inject(APP_BASE_HREF) private baseHref: string
   ) {
     this.matIconRegistry.addSvgIcon(
       `opportunity`,
       this.domSanitizer.bypassSecurityTrustResourceUrl(
-        '../assets/opportunity.svg'
+        this.baseHref + '../assets/opportunity.svg'
       )
     );
   }
