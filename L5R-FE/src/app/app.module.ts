@@ -20,7 +20,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatTabsModule,
     MatIconModule,
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '' }],
+  providers: [{ provide: APP_BASE_HREF, useValue: 'L5R-Reference/' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
