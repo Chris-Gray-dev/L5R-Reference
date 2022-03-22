@@ -1,15 +1,44 @@
 <mat-tab-group>
-  <mat-tab label="Kata2"> Coming soon </mat-tab>
+  <mat-tab label="Kata" > Coming soon </mat-tab>
   <mat-tab label="Kihō"> Coming soon </mat-tab>
   <mat-tab label="Invocations"> Coming soon </mat-tab>
   <mat-tab label="Rituals"> Coming soon </mat-tab>
   <mat-tab label="Shūji"> Coming soon </mat-tab>
   <mat-tab label="Mahō"> Coming soon </mat-tab>
-  <mat-tab label="Ninjitsu"> Test <mat-icon svgIcon="opportunity"></mat-icon> </mat-tab>
+  <mat-tab label="Ninjitsu"> Test <app-opportunity> </app-opportunity> dasdasda  </mat-tab>
   <mat-tab label="Starred"> Coming soon </mat-tab>
 </mat-tab-group>
+<router-outlet></router-outlet>
 
+<nav mat-tab-nav-bar>
+  <a mat-tab-link
+    *ngFor="let link of navLinks"
+    [routerLink]="link.link"
+    routerLinkActive #rla="routerLinkActive"
+    [active]="rla.isActive">
+    {{link.label}}
+  </a>
+  </nav>
+<router-outlet></router-outlet>
+
+<div *ngFor="let item of rings | keyvalue">
+    Key: <b>{{item.key}}</b> and Value: <b>{{item.value}}</b>
+</div>
+<br/>
+<div *ngFor="let item of books | keyvalue">
+    Key: <b>{{item.key}}</b> and Value: <b>{{item.value}}</b>
+</div>
+<br/>
+<div *ngFor="let item of kataStyles | keyvalue">
+    Key: <b>{{item.key}}</b> and Value: <b>{{item.value}}</b>
+</div>
+<br/>
+<div *ngFor="let item of techTypes | keyvalue">
+    Key: <b>{{item.key}}</b> and Value: <b>{{item.value}}</b>
+</div>
+<br/>
 <div>
-  <h3>Disclaimer</h3>
+  <br/>
+  <h3>Disclaimer</h3> 
   <p>This site is intended as an easily-accessible digital reference for products you already own. Please ensure you only access content in accordance with your local laws.</p>
 </div>
