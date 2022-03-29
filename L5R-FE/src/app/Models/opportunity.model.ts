@@ -1,6 +1,6 @@
 export interface Opportunity {
-  CostType: number; // Ring
-  CostAmount: number;
-  CostMulti: boolean;
-  Ability: string;
+  costType: number; // Ring
+  costAmount: number;
+  costMulti: boolean;
+  ability: string;
 }

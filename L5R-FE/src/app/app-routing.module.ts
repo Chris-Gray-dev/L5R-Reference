@@ -11,6 +11,7 @@ import { ShujiComponent } from './Components/shuji/shuji.component';
 import { StarredComponent } from './Components/starred/starred.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/kata', pathMatch: 'full' },
   { path: 'kata', component: KataComponent },
   { path: 'kiho', component: KihoComponent },
   { path: 'invocations', component: InvocationsComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'maho', component: MahoComponent },
   { path: 'ninjitsu', component: NinjitsuComponent },
   { path: 'starred', component: StarredComponent },
+  { path: '**', redirectTo: '/kata', pathMatch: 'full' },
 ];
 
 @NgModule({

@@ -1,0 +1,27 @@
+<mat-card class="ninjutsu-card">
+    <mat-card-title >
+      <div class="title">
+        {{technique.name}}
+        <div>Rank {{technique.rank}} {{techniqueTypes[technique.type]}}</div> 
+      </div>
+        
+    </mat-card-title>
+  <mat-card-subtitle>{{books[technique.source.book]}} page {{technique.source.page}}</mat-card-subtitle>
+  <mat-card-content>
+    <p>{{technique.description}}</p>
+    <p>Activation: <ngx-dynamic-hooks [content]=technique.activation></ngx-dynamic-hooks> </p>
+    <div *ngIf=technique.effects><p>Effects: <ngx-dynamic-hooks [content]=technique.effects></ngx-dynamic-hooks> </p></div>
+  </mat-card-content>
+</mat-card>
+
+<!--
+<p>{{technique.name}}</p>
+<p>-----------------------------------------------------------------------</p>
+<ngx-dynamic-hooks [content]=technique.activation></ngx-dynamic-hooks>
+    <p>{{technique.activation}}</p>
+    <p></p>
+    <div *ngFor="let opp of technique.newOpportunities">
+        <ngx-dynamic-hooks [content]=opp.ability ></ngx-dynamic-hooks>
+    </div>
+<app-check> pp!</app-check>
+<p>-----------------------------------------------------------------------</p>-->
