@@ -1,1 +1,4 @@
-<p>maho works!</p>
+<div class="cards" *ngFor="let technique of maho">
+    <app-technique-card [technique]=technique [techniqueTypes]=techniqueTypes [books]=books [rings]=rings></app-technique-card>
+</div>
+

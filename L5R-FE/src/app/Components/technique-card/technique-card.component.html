@@ -1,0 +1,22 @@
+<mat-card class="technique-card">
+    <mat-card-title>
+      <div class="title" [ngStyle]="{'background-color':getColour(technique.type)}">
+        {{technique.name}}
+        <div>Rank {{technique.rank}} 
+          <span *ngIf="gte(technique.ring,0)">{{getRing(technique.ring)}}</span> 
+          <span *ngIf=technique.clan >{{technique.clan}}</span> 
+          <span *ngIf="gte(technique.style,0)">{{getKataStyle(technique.style)}}</span>
+          {{techniqueTypes[technique.type]}}
+        </div> 
+      </div>      
+    </mat-card-title>
+  <mat-card-subtitle>{{books[technique.source.book]}} page {{technique.source.page}}</mat-card-subtitle>
+  <mat-card-content>
+    <div class="description"><p>{{technique.description}}</p></div>
+    <div *ngIf=technique.activation><p>Activation: <ngx-dynamic-hooks [content]=technique.activation></ngx-dynamic-hooks> </p></div>
+    <div *ngIf=technique.effects><p>Effects: <ngx-dynamic-hooks [content]=technique.effects></ngx-dynamic-hooks> </p></div>
+    <div *ngIf=technique.newOpportunities>
+      <app-new-opportunities [opportunities]="technique.newOpportunities" [colour]="getColour(technique.type)" [rings]=rings></app-new-opportunities>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,8 @@
+<div class="title" [ngStyle]="{'border-top':'2px solid ' + colour, 'border-bottom':'2px solid ' + colour}">
+    New Opportunities
+</div>
+<div class="opportunities" *ngFor="let opportunity of opportunities">
+    <div class="opportunity">
+        {{getRing(opportunity.costType)}} <span *ngFor="let i of numSequence(opportunity.costAmount)"><app-opportunity></app-opportunity></span> <span *ngIf=opportunity.costMulti>+</span> : <span><ngx-dynamic-hooks [content]=opportunity.ability></ngx-dynamic-hooks></span>
+    </div>
+</div>

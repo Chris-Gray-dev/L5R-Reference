@@ -1,1 +1,4 @@
-<p>kiho works!</p>
+<div class="cards" *ngFor="let technique of kiho">
+    <app-technique-card [technique]=technique [techniqueTypes]=techniqueTypes [books]=books [rings]=rings></app-technique-card>
+</div>
+

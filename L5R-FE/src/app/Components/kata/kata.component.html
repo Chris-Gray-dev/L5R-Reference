@@ -1,1 +1,3 @@
-<p>kata works!</p>
+<div class="cards" *ngFor="let technique of kata">
+    <app-technique-card [technique]=technique [techniqueTypes]=techniqueTypes [books]=books [rings]=rings [kataStyles]="kataStyles"></app-technique-card>
+</div>

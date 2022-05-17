@@ -1,1 +1,3 @@
-<p>invocations works!</p>
+<div class="cards" *ngFor="let technique of invocations">
+    <app-technique-card [technique]=technique [techniqueTypes]=techniqueTypes [books]=books [rings]=rings></app-technique-card>
+</div>

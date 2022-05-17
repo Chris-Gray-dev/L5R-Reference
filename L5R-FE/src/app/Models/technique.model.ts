@@ -16,4 +16,5 @@ export interface Technique {
   clan?: string;
   ring?: number; // Ring
   style?: number; // Kata Style
+  xpCost?: number; // defaults to 3 normally
 }

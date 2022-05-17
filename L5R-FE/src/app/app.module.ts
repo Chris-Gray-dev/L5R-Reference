@@ -24,14 +24,10 @@ import { RitualsComponent } from './Components/rituals/rituals.component';
 import { ShujiComponent } from './Components/shuji/shuji.component';
 import { MahoComponent } from './Components/maho/maho.component';
 import { StarredComponent } from './Components/starred/starred.component';
-import { NinjitsuCardComponent } from './Components/ninjitsu-card/ninjitsu-card.component';
-import { KataCardComponent } from './Components/kata-card/kata-card.component';
-import { KihoCardComponent } from './Components/kiho-card/kiho-card.component';
-import { InvocationCardComponent } from './Components/invocation-card/invocation-card.component';
-import { MahoCardComponent } from './Components/maho-card/maho-card.component';
-import { RitualCardComponent } from './Components/ritual-card/ritual-card.component';
-import { ShujiCardComponent } from './Components/shuji-card/shuji-card.component';
 import { CheckComponent } from './Components/check/check.component';
+import { TechniqueCardComponent } from './Components/technique-card/technique-card.component';
+import { NewOpportunitiesComponent } from './Components/new-opportunities/new-opportunities.component';
+import { TechniqueFilterComponent } from './Components/technique-filter/technique-filter.component';
 
 const componentParsers: Array<HookParserEntry> = [
   {
@@ -57,14 +53,10 @@ const dynamicComponents = [OpportunityComponent, CheckComponent];
     ShujiComponent,
     MahoComponent,
     StarredComponent,
-    NinjitsuCardComponent,
-    KataCardComponent,
-    KihoCardComponent,
-    InvocationCardComponent,
-    MahoCardComponent,
-    RitualCardComponent,
-    ShujiCardComponent,
     CheckComponent,
+    TechniqueCardComponent,
+    NewOpportunitiesComponent,
+    TechniqueFilterComponent,
   ],
   imports: [
     BrowserModule,

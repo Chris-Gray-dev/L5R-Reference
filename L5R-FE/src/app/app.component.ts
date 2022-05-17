@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
         index: 0,
       },
       {
-        label: 'Kiho',
+        label: 'Kihō',
         link: './kiho',
         index: 1,
       },
@@ -75,8 +75,8 @@ export class AppComponent implements OnInit {
         index: 6,
       },
       {
-        label: 'Starred',
-        link: './starred',
+        label: 'Conditions',
+        link: './conditions',
         index: 7,
       },
     ];
