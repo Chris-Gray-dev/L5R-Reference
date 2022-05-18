@@ -79,6 +79,11 @@ export class AppComponent implements OnInit {
         link: './conditions',
         index: 7,
       },
+      {
+        label: 'Starred',
+        link: './starred',
+        index: 99,
+      },
     ];
     console.log(environment.apiURL);
     this.matIconRegistry.addSvgIcon(

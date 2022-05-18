@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Technique } from 'src/app/Models/technique.model';
 
 @Component({
@@ -12,6 +12,9 @@ export class TechniqueCardComponent implements OnInit {
   @Input() techniqueTypes: { [key: number]: string };
   @Input() rings: { [key: number]: string };
   @Input() kataStyles: { [key: number]: string };
+
+  @Output() starToggle: EventEmitter<string> = new EventEmitter();
+
   constructor() {}
 
   ngOnInit(): void {}
@@ -37,6 +40,11 @@ export class TechniqueCardComponent implements OnInit {
       ringName = this.rings[ring];
     }
     return ringName;
+  }
+
+  passEvent(data: string) {
+    console.log('passing data', data);
+    this.starToggle.emit(data);
   }
 
   getColour(techniqueType: number): string {

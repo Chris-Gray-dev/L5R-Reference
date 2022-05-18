@@ -21,14 +21,15 @@ export class ShujiComponent implements OnInit {
     private bookService: BookService,
     private techniqueTypeService: TechniqueTypeService,
     private ringService: RingService
-  ) {}
-
-  ngOnInit(): void {
+  ) {
     this.bookService.getBooks().subscribe((resp) => (this.books = resp));
     this.ringService.getRings().subscribe((resp) => (this.rings = resp));
     this.techniqueTypeService
       .getTechniqueTypes()
       .subscribe((resp) => (this.techniqueTypes = resp));
+  }
+
+  ngOnInit(): void {
     this.shujiService.getShuji().subscribe((shuji) => {
       this.shuji = shuji;
       console.log('Got shuji');

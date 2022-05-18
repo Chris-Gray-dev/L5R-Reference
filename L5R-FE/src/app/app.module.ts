@@ -14,6 +14,7 @@ import { HookParserEntry } from 'ngx-dynamic-hooks';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 import { OpportunityComponent } from './Components/opportunity/opportunity.component';
 import { NinjitsuComponent } from './Components/ninjitsu/ninjitsu.component';
@@ -28,6 +29,8 @@ import { CheckComponent } from './Components/check/check.component';
 import { TechniqueCardComponent } from './Components/technique-card/technique-card.component';
 import { NewOpportunitiesComponent } from './Components/new-opportunities/new-opportunities.component';
 import { TechniqueFilterComponent } from './Components/technique-filter/technique-filter.component';
+import { StarBtnComponent } from './Components/star-btn/star-btn.component';
+import { DevPageComponent } from './Components/dev-page/dev-page.component';
 
 const componentParsers: Array<HookParserEntry> = [
   {
@@ -57,6 +60,8 @@ const dynamicComponents = [OpportunityComponent, CheckComponent];
     TechniqueCardComponent,
     NewOpportunitiesComponent,
     TechniqueFilterComponent,
+    StarBtnComponent,
+    DevPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,6 +72,7 @@ const dynamicComponents = [OpportunityComponent, CheckComponent];
     MatIconModule,
     MatToolbarModule,
     MatCardModule,
+    MatButtonModule,
     DynamicHooksModule.forRoot({
       globalParsers: componentParsers,
     }),

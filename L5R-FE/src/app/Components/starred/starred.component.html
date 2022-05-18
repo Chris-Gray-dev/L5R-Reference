@@ -1,1 +1,3 @@
-<p>starred works!</p>
+<div class="cards" *ngFor="let technique of techniques">
+    <app-technique-card (starToggle)="UpdateList($event)" [technique]=technique [techniqueTypes]=techniqueTypes [books]=books [rings]=rings></app-technique-card>
+</div>

@@ -1,12 +1,12 @@
 <mat-card class="technique-card">
     <mat-card-title>
       <div class="title" [ngStyle]="{'background-color':getColour(technique.type)}">
-        {{technique.name}}
-        <div>Rank {{technique.rank}} 
+        <span class="name">{{technique.name}} </span>
+        <div class="name2">Rank {{technique.rank}} 
           <span *ngIf="gte(technique.ring,0)">{{getRing(technique.ring)}}</span> 
           <span *ngIf=technique.clan >{{technique.clan}}</span> 
           <span *ngIf="gte(technique.style,0)">{{getKataStyle(technique.style)}}</span>
-          {{techniqueTypes[technique.type]}}
+          <span> {{techniqueTypes[technique.type]}} <app-star-btn (starToggle)="passEvent($event)" [techniqueID]=technique.id></app-star-btn></span>
         </div> 
       </div>      
     </mat-card-title>
